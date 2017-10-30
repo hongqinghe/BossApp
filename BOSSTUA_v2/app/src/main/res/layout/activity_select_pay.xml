@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ <LinearLayout
+        android:id="@+id/ll_zhifubao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/zhifubao" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="支付宝客户端支付"
+            android:textSize="15sp" />
+          <ImageView
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_personal_item_right_icon_16" />
+
+       <!--  <CheckBox
+            android:id="@+id/id_pay_alipay"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll5_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/weixin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="微信支付"
+            android:textSize="15sp" />
+  <ImageView
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_personal_item_right_icon_16" />
+       <!--  <CheckBox
+            android:id="@+id/id_pay_tecent"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true" /> -->
+            
+    </LinearLayout>    
+
+</LinearLayout>

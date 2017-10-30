@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eeeeee"
+              android:orientation="vertical"
+              android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/ll_refund_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/refund_shap_white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/refund_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="申诉成功"
+            android:textColor="#168eef"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/refund_state_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="退款将于1-15个工作日内退回您的支付账户"
+            android:textColor="#404040"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_refund_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/refund_shap_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/refund_timer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/refund_shap_timer"
+            android:gravity="center"
+            android:text="6天23小时59秒后自动退款"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/refund_cause"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:lines="5"
+                android:text="退款理由退款理由退款理由退款理由退款理由退款理由退款理由退款理由退款理由退款理由"
+                android:textColor="#404040"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_refund_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_refund_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/refund_shap_btn_left"
+                android:gravity="center"
+                android:text="取消退款"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/refund_shap_btn_right"
+                android:gravity="center"
+                android:text="提起申诉"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

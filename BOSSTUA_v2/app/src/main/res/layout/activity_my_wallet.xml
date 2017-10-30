@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_layout_blue"
+        />
+
+    <ImageView
+        android:id="@+id/iv_my_wallet"
+        android:layout_width="112dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="79dp"
+        android:src="@drawable/wallet02"/>
+
+    <TextView
+        android:id="@+id/tv_my_wallet_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_my_wallet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="我的余额"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_my_wallet_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_my_wallet_balance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/bt_my_wallet_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_my_wallet_data"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/my_wallet_btn01_press_selector"
+        android:text="提现"
+        android:textColor="#404040"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/bt_my_wallet_recharge"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_below="@id/bt_my_wallet_withdraw"-->
+        <!--android:layout_marginLeft="28dp"-->
+        <!--android:layout_marginRight="28dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:background="@drawable/my_wallet_btn02_press_selector"-->
+        <!--android:text="充值"-->
+        <!--android:textColor="#ffffff"/>-->
+
+    <Button
+        android:id="@+id/bt_my_wallet_balance"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/bt_my_wallet_withdraw"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/my_wallet_btn03_press_selector"
+        android:text="余额明细"
+        android:textColor="#ffffff"/>
+</RelativeLayout>

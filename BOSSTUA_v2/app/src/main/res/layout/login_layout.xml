@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_ffffff"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_phone_num_hint"
+        style="@style/register_hint"
+        android:layout_marginTop="12dp"
+        android:text="@string/tv_phone_num_hint"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        style="@style/register"
+
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_phone"/>
+
+        <View style="@style/register_line"/>
+
+        <EditText
+            android:id="@+id/id_login_username"
+            style="@style/register_edit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/login_user_hint"
+            android:inputType="phone"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:maxLength="11"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_registerpassword_wrong"
+        style="@style/register_hint"
+        android:text="@string/password_wrong"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        style="@style/register"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            style="@style/suo"/>
+
+        <View style="@style/register_line"/>
+
+        <EditText
+            android:id="@+id/id_login_pwd"
+            style="@style/register_edit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/login_pwd_again_hint"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:maxLength="20"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/id_register_immeriately"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/bg_no_color"
+            android:padding="8dp"
+            android:text="@string/btn_register_immediately"
+            android:textColor="@color/c_168eef"/>
+
+        <Button
+            android:id="@+id/id_login_findpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_no_color"
+            android:padding="8dp"
+            android:text="@string/btn_findpwd"
+            android:textColor="@color/c_168eef"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_login_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/app_btn_enabled_shape"
+        android:padding="8dp"
+        android:text="@string/btn_login"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_eeeeee"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="服务主体"
+        android:textColor="@color/c_676767"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_filter_service_body"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_filter_service_body_any"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_service_body_boss"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="BOSS"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_service_body_company"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="机构"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_service_body_personal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="个人"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="服务方式"
+        android:textColor="@color/c_676767"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_filter_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_filter_transaction_any"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_transaction_boss"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="线上"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_transaction_company"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="线下"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_filter_transaction_personal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/release_choice_radiobutton_blue_line_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="货运"
+                android:textColor="@drawable/selector_text_blue"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="价格区间"
+        android:textColor="@color/c_676767"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_view_filter_prics_from"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/corners_storck_bule"
+            android:hint="最低"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="5dp"
+            android:textColorHint="@color/c_bebebe"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="至"
+            android:textColor="@color/c_404040"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/et_view_filter_prics_to"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners_storck_bule"
+            android:hint="最高"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="5dp"
+            android:textColorHint="@color/c_bebebe"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="交易方式(可多选)"
+        android:textColor="@color/c_676767"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.android.app.buystoreapp.widget.CustomGridview
+            android:id="@+id/gv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:numColumns="4" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_filter_finish"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corners_storck_bule"
+        android:text="完成"
+        android:textColor="@color/c_707070" />
+</LinearLayout>

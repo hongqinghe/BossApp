@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_ffffff"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_phone_num_hint"
+                style="@style/register_hint"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_phone_num_hint"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                style="@style/register"
+
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_phone"/>
+
+                <View style="@style/register_line"
+                    />
+
+                <EditText
+                    android:id="@+id/id_register_username"
+                    style="@style/register_edit"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/login_user_hint"
+                    android:inputType="phone"
+                    android:maxLength="11"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_registercode_wrong"
+                style="@style/register_hint"
+                android:text="@string/register_code_wrong"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                style="@style/register"
+                android:layout_marginTop="4dp">
+
+
+                <EditText
+                    android:id="@+id/et_register_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:maxLength="6"
+                    android:hint="@string/hint_authcode"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    />
+
+                <View
+                    style="@style/register_line"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <Button
+                    android:id="@+id/id_register_send_authcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:text="获取验证码"
+                    android:textColor="@color/c_168eef"
+                    android:textSize="16sp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/register_hint"
+                android:text="@string/register_password_hint"/>
+
+            <LinearLayout
+                style="@style/register"
+
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    style="@style/suo"/>
+
+                <View style="@style/register_line"/>
+
+                <EditText
+                    android:id="@+id/id_register_pwd"
+                    style="@style/register_edit"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/login_pwd_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="20"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_registerpassword_wrong"
+                style="@style/register_hint"
+                android:text="@string/register_pwd_error"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                style="@style/register"
+
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    style="@style/suo"/>
+
+                <View style="@style/register_line"/>
+
+                <EditText
+                    android:id="@+id/id_register_pwd_again"
+                    style="@style/register_edit"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/login_pwd_again_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="20"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_visibility"
+                style="@style/register"
+
+                android:layout_marginTop="35dp">
+
+
+                <EditText
+                    android:id="@+id/et_register_inviteCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="6"
+                    android:background="@null"
+                    android:hint="@string/hint_inviteCode"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/id_register_submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/app_btn_enabled_shape"
+                android:text="@string/btn_register"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="38dp">
+
+                <TextView
+                    android:id="@+id/tv_v1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/register_agreement1"
+                    android:textColor="@color/c_999999"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_register_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/register_agreement"
+                    android:textColor="@color/c_999999"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

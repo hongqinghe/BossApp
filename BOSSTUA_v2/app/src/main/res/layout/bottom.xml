@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:clipChildren="false"
+             android:stretchColumns="0,1,2,3,4"
+             android:background="@android:color/transparent"
+    >
+
+    <TableRow
+        android:gravity="center_horizontal|bottom"
+        android:background="@drawable/ic_tab_bottom"
+        >
+
+        <com.android.app.buystore.utils.CustomLinearlayout
+            android:id="@+id/id_tab_home"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            app:containerHight="45dp"
+            app:containerWidth="45dp"
+            app:imageHight="30dp"
+            app:imageSrc="@drawable/ic_home_selected"
+            app:imageWidth="45dp"
+            app:txtContent="主页"
+            app:txtSize="10"
+            app:txtColor="@color/c_168eef"/>
+
+        <com.android.app.buystore.utils.CustomLinearlayout
+            android:id="@+id/id_tab_goods"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            app:containerHight="45dp"
+            app:containerWidth="45dp"
+            app:imageHight="30dp"
+            app:imageSrc="@drawable/ic_found_default"
+            app:imageWidth="45dp"
+            app:txtContent="发现"
+            app:txtSize="10"/>
+
+        <com.android.app.buystore.utils.CustomLinearlayout
+            android:id="@+id/id_tab_business"
+            android:gravity="center"
+            app:containerHight="60dp"
+            app:containerWidth="45dp"
+            app:imageHight="45dp"
+            app:imageSrc="@drawable/ic_release_selected"
+            app:imageWidth="45dp"
+            app:txtContent="发布"
+            app:txtSize="10"/>
+
+        <com.android.app.buystore.utils.CustomLinearlayout
+            android:id="@+id/id_tab_news"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            app:containerHight="45dp"
+            app:containerWidth="45dp"
+            app:imageHight="30dp"
+            app:imageSrc="@drawable/ic_message_default"
+            app:imageWidth="45dp"
+            app:txtContent="消息"
+            app:txtSize="10"/>
+
+        <com.android.app.buystore.utils.CustomLinearlayout
+            android:id="@+id/id_tab_personal"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            app:containerHight="45dp"
+            app:containerWidth="45dp"
+            app:imageHight="30dp"
+            app:imageSrc="@drawable/ic_self_default"
+            app:imageWidth="45dp"
+            app:txtContent="我的"
+            app:txtSize="10"/>
+    </TableRow>
+
+</TableLayout>

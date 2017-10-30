@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:background="#eeeeee"
+    android:focusableInTouchMode="true"
+     >
+
+    <EditText
+        android:id="@+id/et_app_fankui_title"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您要反馈的主题(限制20个字)"
+        android:background="@drawable/proposed_feedback"
+        android:maxLength="20"
+        android:textColor="#999999"
+        android:textSize="15sp"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/et_app_fankui_title"
+        android:id="@+id/rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/proposed_feedback"
+        android:layout_above="@+id/btn_app_fankui">
+        <EditText
+            android:id="@+id/et_proposed_feedback_context"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="10dp"
+            android:textScaleX="1"
+            android:gravity="top"
+            android:background="@null"
+            android:hint="请填写您的备注信息"
+            android:maxLines="15"
+            android:maxLength="250"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:text="0/500"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_app_fankui"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_168eef"
+        android:gravity="center"
+        android:text="我要反馈"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_shortAnimTime">
+
+    <item android:state_checked="true" android:state_enabled="true"  android:drawable="@drawable/ic_car_check" />
+    <item android:state_checked="false" android:state_enabled="true" android:drawable="@drawable/ic_car_uncheck"/>
+</selector>

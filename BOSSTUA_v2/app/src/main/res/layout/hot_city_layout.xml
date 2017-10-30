@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/hotBtn1"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hot_city_item_bg"/>
+
+    <Button
+        android:id="@+id/hotBtn2"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hot_city_item_bg"/>
+
+    <Button
+        android:id="@+id/hotBtn3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hot_city_item_bg"/>
+
+    <Button
+        android:id="@+id/hotBtn4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hot_city_item_bg"/>
+
+    <Button
+        android:id="@+id/hotBtn5"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hot_city_item_bg"/>
+
+</LinearLayout>

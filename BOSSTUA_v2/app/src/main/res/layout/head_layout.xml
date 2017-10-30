@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/c_ffffff"
+                android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/iv_back"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="15dp"
+        android:src="@drawable/ic_back_black"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ib_collection"
+        android:layout_toRightOf="@+id/iv_back"
+        android:layout_toStartOf="@+id/ib_collection"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Small Text"
+        android:textColor="@color/c_3e3e3e"
+        android:textSize="19sp"/>
+
+    <ImageButton
+        android:visibility="invisible"
+        android:id="@+id/ib_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_share_black"/>
+
+    <ImageButton
+        android:id="@+id/ib_collection"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/ib_share"
+        android:background="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_collection_black"/>
+</RelativeLayout>

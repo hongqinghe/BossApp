@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/id_shop_car_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/CustomListView">
+    </ListView>
+
+    <ViewStub
+        android:id="@+id/id_search_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/list_empty_loading_layout"/>
+
+    <ViewStub
+        android:id="@+id/id_empty_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/list_empty_loading_fail"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_bottom_height"
+        android:background="@color/gray">
+
+        <CheckBox
+            android:id="@+id/id_shop_car_buyAll"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/id_shop_car_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/id_shop_car_buyAll"
+            android:text="@string/shop_car_total_money"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/id_shop_car_checkout"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/app_btn_enabled_shape"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/shop_car_checkout"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

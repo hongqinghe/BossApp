@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_eeeeee"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.app.buystoreapp.widget.RadarView
+            android:id="@+id/radar_view"
+            android:layout_width="300dp"
+            android:layout_height="330dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+        <com.android.app.buystoreapp.widget.XiuView
+            android:id="@+id/xiu_view"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_splash_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"
+        android:text="世界这么大 我先去看看"
+        android:textColor="@color/c_FF7A7A7A" />
+
+    <Button
+        android:id="@+id/bt_splash_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/management_btn_press_blue"
+        android:padding="10dp"
+        android:text="登 录"
+        android:textColor="@color/c_FF24A7FD"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bt_splash_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bt_splash_login"
+        android:layout_alignLeft="@+id/bt_splash_login"
+        android:layout_alignRight="@+id/bt_splash_login"
+        android:layout_alignStart="@+id/bt_splash_login"
+        android:layout_below="@+id/bt_splash_login"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/management_btn_press_blue"
+        android:padding="10dp"
+        android:text="注 册"
+        android:textColor="@color/c_FF24A7FD"
+        android:textSize="18sp" />
+</RelativeLayout>

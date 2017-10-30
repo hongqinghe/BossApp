@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/nick_name"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_shap_eee"
+                android:gravity="center"
+                android:hint="请输入运费价格"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <!-- <EditText
+             android:id="@+id/nick_name"
+             android:layout_width="260dp"
+             android:layout_height="0dp"
+             android:layout_weight="2"
+             android:gravity="center"
+             android:inputType="number"
+             android:background="#eeeeee"
+             android:padding="5dp"
+             android:hint="请输入运费价格"
+             android:textSize="18sp"
+             />-->
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="1dp"
+            android:background="#eeeeee"/>
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#168eef"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"/>
+
+            <TextView
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#168eef"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

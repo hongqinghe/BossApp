@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_tab_copy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_tab_group_cpy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_tab_recommend_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:checked="true"
+                android:background="@drawable/tab_radiobutton_selector"
+                android:text="推荐"
+                android:textColor="@color/c_676767"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_heat_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/tab_radiobutton_selector"
+                android:text="人气"
+                android:textColor="@color/c_676767"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_fresh_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/tab_radiobutton_selector"
+                android:text="最新"
+                android:textColor="@color/c_676767"
+                android:textSize="14sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_nearby_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/tab_radiobutton_selector"
+                android:text="附近"
+                android:textColor="@color/c_676767"
+                android:textSize="14sp"/>
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>

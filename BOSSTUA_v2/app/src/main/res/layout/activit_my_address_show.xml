@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include
+    android:id="@+id/include"
+    layout="@layout/head_layout"/>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_evalute_top_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="#ffffff">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_change_address"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="收货地址"-->
+            <!--android:textColor="#404040"-->
+            <!--android:textSize="19sp" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_addresslist_back"-->
+            <!--android:layout_width="68dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@null"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/ic_arrows_address_left" />-->
+    <!--</RelativeLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_addAddress"
+        android:layout_below="@+id/include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.android.app.buystoreapp.widget.ListViewForScrollView
+                android:id="@+id/lv_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="勾选地址为默认地址"
+                android:textColor="@color/c_999999"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="长按地址删除"
+                android:textColor="@color/c_999999"
+                android:textSize="12sp"
+                android:paddingBottom="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_addAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/add_new_address"
+        android:textColor="@color/c_ffffff"
+        android:textSize="19sp"
+        android:background="@color/c_168eef"
+        android:gravity="center"/>
+</RelativeLayout>

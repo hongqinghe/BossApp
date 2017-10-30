@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+    
+    <include layout="@layout/update_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/id_app_setting_clean_cache"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/app_btn_enabled_shape"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:padding="8dp"-->
+        <!--android:text="@string/app_setting_clean_cache_deafult"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="14sp" />-->
+
+    <Button
+        android:id="@+id/id_updateuserinfo_userinfo_exit_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/app_btn_enabled_shape"
+        android:text="@string/personal_exit" />
+
+</LinearLayout>

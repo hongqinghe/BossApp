@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".managementservice.ChangePhoneActivity">
+
+    <include
+        android:id="@+id/rl_state_setting_top_title"
+        layout="@layout/head_layout"
+        />
+
+    <LinearLayout
+        android:layout_above="@+id/btn_change_phone_next"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_state_setting_top_title"
+        android:orientation="vertical">
+
+        <View style="@style/LineColordddddd" />
+
+        <TextView
+            android:id="@+id/tv_set_change_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp"
+            android:text="修改手机号需要短信确认，验证码已发送至手机: 13693034344,请按提示操作。"
+            android:textColor="@color/c_999999"
+            android:textSize="15sp" />
+
+        <View
+            style="@style/LineColordddddd"
+            android:layout_marginTop="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:id="@+id/et_input_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:singleLine="true"
+                android:background="@drawable/change_phone"
+                android:paddingLeft="15dp"
+                android:hint="输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textSize="15sp"
+                android:textColor="@color/c_333333"
+                android:layout_toLeftOf="@+id/btn_get_verification_code"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/btn_get_verification_code"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/c_168eef"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/c_ffffff"
+                android:textSize="15sp"
+                android:layout_marginRight="20dp"
+                />
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change_phone_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_168eef"
+        android:text="下一步"
+        android:textColor="@color/c_ffffff"
+        android:textSize="19sp" />
+</RelativeLayout>

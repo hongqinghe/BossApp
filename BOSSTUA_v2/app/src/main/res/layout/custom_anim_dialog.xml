@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#999999"
+              android:gravity="center"
+              android:minHeight="60dp"
+              android:minWidth="80dp"
+              android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll01"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imv01"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_anim_progress"/>
+
+        <TextView
+            android:id="@+id/tv01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="正在开通....."
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll02"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imv02"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_anim_success"/>
+
+        <TextView
+            android:id="@+id/tv02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center_horizontal"
+            android:text="开通成功！请在请在我是服务者中进行相关设置"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

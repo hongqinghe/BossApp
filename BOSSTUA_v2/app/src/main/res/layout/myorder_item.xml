@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              android:background="@color/ivory"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp"
+              android:weightSum="2">
+
+    <RelativeLayout
+        android:id="@+id/id_myorder_item_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_myorder_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/settings_userinfo_textsize"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/id_myorder_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/settings_userinfo_textsize"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_personal_item_right_icon_16"/>
+    </RelativeLayout>
+
+    <com.android.app.buystore.utils.NoScrollGridView
+        android:id="@+id/id_myorder_content_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchMode="columnWidth"
+        style="@style/CustomListView"
+        android:numColumns="1"
+        android:verticalSpacing="5dip">
+    </com.android.app.buystore.utils.NoScrollGridView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_item_divider"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_myorder_totalMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/settings_userinfo_textsize"/>
+
+        <LinearLayout
+            android:id="@+id/id_myorder_item_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/id_myorder_del"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/order_del_shape"
+                android:padding="10dp"
+                android:text="@string/order_del"/>
+
+            <Button
+                android:id="@+id/id_myorder_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/app_btn_enabled_shape"
+                android:padding="10dp"
+                android:text="@string/order_charge"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

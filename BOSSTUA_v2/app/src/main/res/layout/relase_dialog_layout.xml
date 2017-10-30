@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c_168eef">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择发布方式"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView7" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="发布须知"
+             android:id="@+id/tv_release_know"
+             android:textColor="@color/white"
+             android:textSize="12sp"
+             android:layout_centerVertical="true"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentEnd="true"
+             android:layout_marginRight="15dp"
+             android:layout_marginEnd="15dp" />
+     </RelativeLayout>
+
+     <com.android.app.buystoreapp.widget.MyGridLayout
+         android:id="@+id/ml_relase_head"
+         android:layout_marginTop="15dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@android:color/transparent"
+         app:itemMargin="1"
+         app:numColumn="2" />
+     <com.android.app.buystoreapp.widget.MyGridLayout
+         android:id="@+id/ml_relase_tag"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:background="@android:color/transparent"
+         app:itemMargin="1"
+         app:numColumn="3" />
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="40dp"
+         android:layout_marginBottom="20dp"
+         android:gravity="center">
+         <ImageView
+             android:id="@+id/iv_closs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@android:color/transparent"
+             android:src="@drawable/ic_release_tab_black"
+             />
+     </LinearLayout>
+
+
+ </LinearLayout>

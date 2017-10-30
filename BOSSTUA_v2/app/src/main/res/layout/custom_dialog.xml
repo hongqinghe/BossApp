@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textColor="#444444"
+                android:text="描述"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="0.6dp"
+            android:background="#e0e0e0"/>
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/btnLeft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="16sp"
+                android:textColor="@color/bill_text_lv"/>
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"/>
+
+            <TextView
+                android:id="@+id/btnRight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="确定"
+                android:textColor="@color/bill_text_lv"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

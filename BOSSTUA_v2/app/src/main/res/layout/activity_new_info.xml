@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ffffff"
+    tools:context="com.android.app.buystoreapp.managementservice.NewInfoActivity">
+<include
+    android:id="@id/include"
+    layout="@layout/head_layout"/>
+<View
+    android:layout_below="@+id/include"
+    android:id="@+id/line"
+   style="@style/LineColordddddd"/>
+    <LinearLayout
+        android:id="@+id/ll_beloow"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/c_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical">
+
+            <com.android.app.buystoreapp.widget.RoundImageView
+                android:id="@+id/iv_newinfo_head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/tv_newinfo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="姓名・"
+                android:textColor="@color/c_404040"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_newinfo_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职业"
+                android:textColor="@color/c_404040"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_newinfo_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/vip_diwang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_attentiong"/>
+
+                <TextView
+                    android:id="@+id/tv_subscribe_num"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="111111"
+                    android:textColor="@color/c_515151"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/newinfo_acction"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/corners_orange_bg"
+                android:text="订阅"
+                android:textColor="@color/c_515151"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vv"
+        style="@style/LineColordddddd"
+        android:layout_below="@+id/ll_beloow" />
+
+    <com.android.app.buystore.utils.ProgressWebView
+        android:id="@+id/baseweb_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/vv"
+        android:fadeScrollbars="true"
+        android:scrollbarStyle="insideOverlay" />
+</RelativeLayout>

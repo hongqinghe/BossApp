@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/business_item_image_height"
+                android:paddingTop="@dimen/business_item_padding">
+
+    <ImageView
+        android:id="@+id/id_business_item_image"
+        android:layout_width="@dimen/business_item_image_width"
+        android:layout_height="@dimen/business_item_image_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:contentDescription="@string/default_pic"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/id_business_item_image">
+
+        <TextView
+            android:id="@+id/id_business_item_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/home_item_distance"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/id_business_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/id_business_item_distance"
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/business_item_title"/>
+
+        <TextView
+            android:id="@+id/id_business_item_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/id_business_item_name"
+            android:layout_below="@id/id_business_item_name"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/business_item_intro"/>
+
+        <RelativeLayout
+            android:id="@+id/id_business_item_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/id_business_item_intro"
+            android:layout_below="@id/id_business_item_intro"
+            android:layout_marginTop="5dp">
+
+            <RatingBar
+                android:id="@+id/id_business_item_rating_bar"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="0.0"
+                android:stepSize="1.0"/>
+
+            <TextView
+                android:id="@+id/id_business_item_talknum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_business_item_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/id_business_item_middle"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

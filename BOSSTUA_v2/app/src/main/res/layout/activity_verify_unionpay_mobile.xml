@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <TextView
+        android:id="@+id/tv_verify_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:text="绑定银行卡需要短信确认，验证码已发送至手机：138****4234，请按提示操作。"
+        android:textColor="#999999"
+        android:textSize="15sp"/>
+
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_verify_mobile"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#dcdcdc"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line01">
+
+        <EditText
+            android:id="@+id/et_verify_number"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:inputType="number"
+            android:hint="请输入手机验证码"
+            android:background="@drawable/recharge_border01"/>
+
+        <LinearLayout
+            android:id="@+id/ll_verify_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_verify_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（48）"
+                android:textColor="#999999"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_01"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"/>
+
+    <Button
+        android:id="@+id/btn_verify_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/line02"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/with_draw_btn_press_selector"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

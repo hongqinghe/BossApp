@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <LinearLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/add_alipay_warning_sign"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:text="请绑定本人的支付宝账户，之后提现会至该账户。"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_01"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/ll_02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:text="真实姓名"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入您的真实姓名"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line01"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_02"
+            android:background="#999999"/>
+
+        <LinearLayout
+            android:id="@+id/ll_03"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/line01"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:text="支付宝号"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_userNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:inputType="textVisiblePassword"
+                android:hint="请输入您的支付宝账户"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line02"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_03"
+            android:background="#999999"/>
+
+        <LinearLayout
+            android:id="@+id/ll_04"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/line02"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:text="重复输入"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_userNumber_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:inputType="textVisiblePassword"
+                android:hint="请再次输入您的支付宝账户"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line03"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_03"
+            android:background="#999999"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_mobileVerify"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/rl_all"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/with_draw_btn_press_selector"
+        android:text="下一步，手机验证"
+        android:textSize="18sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_mobileVerify"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="支付宝账户只会是您的手机号或邮箱号，请确保您的支付宝帐号存在或经过实名验证，否则无法进行提现操作哦！"
+        android:textColor="#999999"
+        android:textSize="11sp"/>
+</RelativeLayout>

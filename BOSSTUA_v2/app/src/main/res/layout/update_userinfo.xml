@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_input_shape"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_updateuserinfo_txt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_usericon"
+            android:textSize="@dimen/home_item_title"/>
+
+        <com.android.app.buystore.utils.CircleImageView
+            android:id="@+id/id_updateuserinfo_userinfo_usericon"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_personal_item_right_icon_16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_input_shape"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_updateuserinfo_txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/personal_username"
+            android:textSize="@dimen/home_item_title"/>
+
+        <EditText
+            android:id="@+id/id_updateuserinfo_userinfo_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/id_updateuserinfo_txt3"
+            android:background="@null"
+            android:paddingRight="8dp"
+            android:enabled="false"
+            android:gravity="right"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_input_shape"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_updateuserinfo_txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/personal_nickname"
+            android:textSize="@dimen/home_item_title"/>
+
+        <TextView
+            android:id="@+id/id_updateuserinfo_userinfo_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/id_updateuserinfo_txt4"
+            android:gravity="right"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_personal_item_right_icon_16"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/id_updateuserinfo_safe"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_input_shape"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/id_updateuserinfo_txt8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@string/personal_safe"
+            android:textSize="@dimen/home_item_title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/id_updateuserinfo_txt8"
+            android:gravity="right|center_vertical"
+            android:hint="@string/personal_safe_hint"
+            android:textColorHint="@color/gray"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_personal_item_right_icon_16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_updateuserinfo_address"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_input_shape"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@string/personal_address"
+            android:textSize="@dimen/home_item_title"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_personal_item_right_icon_16"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_updateuserinfo_userinfo_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/app_btn_enabled_shape"
+        android:text="@string/personal_exit"/>
+</LinearLayout>

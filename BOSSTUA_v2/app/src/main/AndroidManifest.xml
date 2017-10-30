@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.app.buystoreapp"
+          android:versionCode="20"
+          android:versionName="2.1.10">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19"/>
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS"/>-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+   <!-- <uses-permission android:name="android.permission.READ_SMS"/>-->
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".crash.CrashApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="965764d0f5a8f05b2ebcecf2a6c09dd8"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- 环信设置 -->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="bosstuan#bosstuan"/>
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <!--
+             <activity
+             android:name=".FirstLauncherActivity"
+             android:configChanges="orientation|keyboardHidden"
+             android:screenOrientation="portrait"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        -->
+        <activity
+            android:name=".BossTicketPay"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <!--
+             <activity
+             android:name=".EveryLauncherActivity"
+             android:configChanges="orientation|keyboardHidden"
+             android:screenOrientation="portrait"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        -->
+        <activity
+            android:name=".WelcomeBossBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!--
+          <activity-alias
+              android:name="com.android.app.buystoreap.BossBuy"
+              android:targetActivity=".WelcomeBossBuyActivity">
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.DEFAULT" />
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity-alias>
+        -->
+
+        <activity
+            android:name=".BossBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name=".base.VersionManagerService"
+            android:exported="false"/>
+        <service
+            android:name=".base.UpdateApkService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".BaseWebActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".ContactActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BuyTicketActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".MyBossTicketDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".goods.ShopDetailInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".location.CityActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".search.SearchResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.FindPwdConfirmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.ModifyPasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.MyOrderAssessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.FindPasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.ShopCarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.ConfirmOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".setting.UserAddressItemActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.PayOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="wxa2b94b4c31229c30"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".setting.AppSettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.AppFanKuiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".setting.AppVersionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".PopupWindowActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom"/>
+        <activity
+            android:name=".setting.AppSupportHelpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".CategoriesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".ReleaseStepTowActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".ReleaseStepTwoNextAct"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".ReleaseFinishActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".ProductListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ImageGridActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name="com.android.app.buystore.utils.PicChoiceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name="com.android.app.buystore.utils.PhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".goods.CommentBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".im.MessageListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".goods.ShoppingCartActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".location.AddressDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".location.AddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".goods.BigImageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".ReleaseChoiceClassActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".order.ApplyRefundAct"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <!-- 聊天页面 -->
+        <activity
+            android:name=".im.ChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+        <!-- 地图 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"/>
+
+        <service
+            android:name=".location.CityService"
+            android:process=":background">
+            <intent-filter>
+                <action android:name="com.android.app.buystoreapp.location"/>
+            </intent-filter>
+        </service>
+
+        <!-- alipay sdk begin -->
+        <activity android:name="com.alipay.sdk.pay.demo.AliPayActivity"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- alipay sdk end -->
+
+
+        <!-- U Meng Share -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="580b474a2ae85b736e002d9b"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="2a0dded1bbc6c8a7bb19a9d4371f554e"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"/>
+        <!-- U Meng Push end -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!-- 微信分享 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+               <!-- <data android:scheme="tencent1104725359"/>-->
+                <data android:scheme="tencent101377560"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- Ping++ SDK -->
+        <!--
+             <activity
+             android:name="com.pingplusplus.android.PaymentActivity"
+             android:configChanges="orientation|screenSize"
+             android:launchMode="singleTop"
+             android:screenOrientation="portrait"
+             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+
+
+        <!-- 微信支付 -->
+        <!--
+             <activity-alias
+             android:name=".wxapi.WXPayEntryActivity"
+             android:exported="true"
+             android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+        -->
+
+
+        <!-- 短信注册sdk -->
+        <!--
+                 <activity
+                 android:name="com.mob.tools.MobUIShell"
+                 android:configChanges="keyboardHidden|orientation|screenSize"
+                 android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                 android:screenOrientation="portrait"
+                 android:windowSoftInputMode="stateHidden|adjustResize" />
+        -->
+        <!--
+                &lt;!&ndash; U Meng 消息推送 &ndash;&gt;
+                &lt;!&ndash; 监听通知点击或者忽略处理的广播 &ndash;&gt;
+                <receiver
+                    android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+                    android:exported="false" />
+
+                &lt;!&ndash; 监听开机运行、网络连接变化、卸载的广播 &ndash;&gt;
+                <receiver
+                    android:name="com.umeng.message.SystemReceiver"
+                    android:process=":push">
+                    <intent-filter>
+                        <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                        <data android:scheme="package" />
+                    </intent-filter>
+                </receiver>
+
+                &lt;!&ndash; 监听消息到达的广播 &ndash;&gt;
+                <receiver
+                    android:name="com.umeng.message.MessageReceiver"
+                    android:process=":push">
+                    <intent-filter>
+                        <action android:name="org.agoo.android.intent.action.RECEIVE" />
+                    </intent-filter>
+                </receiver>
+
+                &lt;!&ndash; 监听宿主选举的广播 &ndash;&gt;
+                <receiver
+                    android:name="com.umeng.message.ElectionReceiver"
+                    android:process=":push">
+                    <intent-filter>
+                        <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                        <category android:name="umeng" />
+                    </intent-filter>
+                </receiver>
+
+                &lt;!&ndash; 监听注册的广播 &ndash;&gt;
+                &lt;!&ndash; 【应用包名】字符串需要替换成本应用的应用包名 &ndash;&gt;
+                <receiver
+                    android:name="com.umeng.message.RegistrationReceiver"
+                    android:exported="false">
+                    <intent-filter>
+                        <action android:name="com.android.app.buystoreapp.intent.action.COMMAND" />
+                    </intent-filter>
+                </receiver>
+                <receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+                    <intent-filter>
+                        <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    </intent-filter>
+                </receiver>
+
+                &lt;!&ndash; Umeng的长连服务，用来建立推送的长连接的 &ndash;&gt;
+                &lt;!&ndash; 【应用包名】字符串需要替换成本应用的应用包名 &ndash;&gt;
+                <service
+                    android:name="com.umeng.message.UmengService"
+                    android:exported="true"
+                    android:label="PushService"
+                    android:process=":push">
+                    <intent-filter>
+                        <action android:name="com.android.app.buystoreapp.intent.action.START" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="com.android.app.buystoreapp.intent.action.COCKROACH" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                        <category android:name="umeng" />
+                    </intent-filter>
+                </service>
+
+                &lt;!&ndash; Umeng的消息接收服务 &ndash;&gt;
+                <service
+                    android:name="com.umeng.message.UmengIntentService"
+                    android:process=":push" />
+
+                &lt;!&ndash; Umeng的消息路由服务 &ndash;&gt;
+                <service
+                    android:name="com.umeng.message.UmengMessageIntentReceiverService"
+                    android:exported="true"
+                    android:process=":push">
+                    <intent-filter>
+                        <action android:name="org.android.agoo.client.MessageReceiverService" />
+                    </intent-filter>
+                    <intent-filter>
+                        <action android:name="org.android.agoo.client.ElectionReceiverService" />
+                    </intent-filter>
+                </service>
+        -->
+
+
+        <!--
+         &lt;!&ndash; v2.4.1添加的Service，Umeng的消息接收后的处理服务 &ndash;&gt;
+         <service
+             android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+             android:exported="false">
+             <intent-filter>
+                 <action android:name="com.umeng.messge.registercallback.action" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="com.umeng.message.unregistercallback.action" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="com.umeng.message.message.handler.action" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="com.umeng.message.autoupdate.handler.action" />
+             </intent-filter>
+         </service>
+
+         &lt;!&ndash; V1.3.0添加的service，负责下载通知的资源 &ndash;&gt;
+         <service android:name="com.umeng.message.UmengDownloadResourceService" />
+        -->
+        <!-- 以下内容魏林编写 -->
+        <activity
+            android:name=".managementservice.ExplainWebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.MyRapidlyChatSetUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <!-- <activity android:name=".managementservice.ExplainWebViewActivity"/> -->
+        <activity
+            android:name=".managementservice.MyStateSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.PaySuccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.ManagementServiceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.ReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.MymoreResourcesandServiceMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.AttentionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.CollectionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.SubscribeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.SubscriedDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.PersonalSettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.PersonalDataActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.MyStreetActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".setting.AddAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".setting.MyAddressListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.AccountSafeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.ChangePhoneActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.InputChanePhoneActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.CorporateheadlinesListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.SeeMeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.NewInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.SesameCreditActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".managementservice.BondActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+
+        <!-- 以下内容尚帅波编写 -->
+        <activity
+            android:name=".wallet.MyWalletActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".wallet.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".wallet.BalanceDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".wallet.WithDrawActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".wallet.AddUnionpayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".wallet.AddAlipayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".wallet.VerifyUnionpayMobileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".wallet.VerifyAlipayMobileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".wallet.SelectUnionpayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".order.MyOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".order.SellerOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".order.OrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".other.VipActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".other.RealCertifiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".other.ProfessionCertifiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".other.CompanyCertifiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity android:name=".StreetActivity"/>
+        <activity
+            android:name=".order.RefundActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".order.RatedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".InviteFriendActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity
+            android:name=".order.TestActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTitlebar"/>
+        <activity
+            android:name=".order.RefundInofoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

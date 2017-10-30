@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants">
+
+    <CheckBox
+        android:id="@+id/tb_filter_transaction_any"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:button="@null"
+        android:background="@drawable/gridview_checkbox_selector"
+        android:checked="false"
+        android:gravity="center"
+        android:text="不限"
+        android:textColor="@drawable/selector_text_blue"
+        android:textSize="12sp"/>
+</LinearLayout>

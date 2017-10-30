@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_eeeeee"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_layout"/>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="44dp"-->
+    <!--android:background="@color/white">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ImageBack"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:src="@drawable/ic_back_black" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/TitleView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="@string/speed_chat_title"-->
+    <!--android:textColor="@color/c_404040"-->
+    <!--android:textSize="@dimen/home_item_title" />-->
+    <!--</RelativeLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_speed_send_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_speed_chat_sms"/>
+
+                    <TextView
+                        android:id="@+id/tv_speed_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_speed_user_work"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/tv_speed_user_work"
+                        android:layout_gravity="center_horizontal"
+                        android:text="用户名"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/c_404040"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_speed_user_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/tv_speed_user_name"
+                        android:layout_marginLeft="113dp"
+                        android:layout_marginStart="113dp"
+                        android:layout_toLeftOf="@+id/iv_speed_send_sms"
+                        android:layout_toStartOf="@+id/iv_speed_send_sms"
+                        android:ellipsize="end"
+                        android:lines="2"
+                        android:text="备注信息工作时间等备注信息工作时间等备注信息工作时间等备注信息工作时间等"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/c_ee0000"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <com.android.app.buystore.utils.CircleImageView
+                    android:id="@+id/iv_speed_user_header"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_speed_chat_head_default"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rg_speed_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/speed_chat_radiobutton_mobile_selector"
+                        android:button="@null"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/tele"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/speed_chat_radiobutton_tele_selector"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/speed_chat_radiobutton_email_selector"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/wchat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/speed_chat_radiobutton_wchat_selector"
+                        android:button="@null"/>
+
+                    <RadioButton
+                        android:id="@+id/qq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/speed_chat_radiobutton_qq_selector"
+                        android:button="@null"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/c_323232"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_speed_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corners_404040_bg"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/ic_speed_chat_call"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="18392056646"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_card_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_blue_bg"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_default"
+                        android:id="@+id/iv_chat_1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_card_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_orange_bg"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_chat_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_default"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- <RelativeLayout
+                 android:id="@+id/PhoneLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/phoneNumText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="电话:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/phoneNum"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/phoneNumText"
+                     android:layout_marginLeft="50dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/WechatLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/wechatNumText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="微信:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/wechatNum"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/wechatNumText"
+                     android:layout_marginLeft="50dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/QQLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/qqNumText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="QQ: "
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/qqNum"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/qqNumText"
+                     android:layout_marginLeft="50dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/webaddressLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/webaddressText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="网址:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/webaddress"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/webaddressText"
+                     android:layout_marginLeft="50dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="80dp"/>
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/IOSaddressLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/IOSaddressText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="IOS网址:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/IOSaddress"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/IOSaddressText"
+                     android:layout_marginLeft="20dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/AndroidaddressLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/AndroidaddressText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="Android网址:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/Androidaddress"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/AndroidaddressText"
+                     android:layout_marginLeft="10dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:id="@+id/RemarkLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp">
+                 <TextView
+                     android:id="@+id/RemarkText"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:text="备注:"
+                     android:textSize="15sp"/>
+                 <TextView
+                     android:id="@+id/Remark"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     android:textSize="15sp"
+                     android:layout_centerVertical="true"
+                     android:layout_toRightOf="@id/RemarkText"
+                     android:layout_marginLeft="10dp"/>
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="#bbbbbb"
+                     android:layout_alignParentBottom="true"
+                     android:layout_marginTop="10dp"/>
+
+             </RelativeLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/contact_note"
+                android:textColor="@color/c_999999"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

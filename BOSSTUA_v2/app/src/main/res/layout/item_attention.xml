@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.android.app.buystoreapp.managementservice.AttentionAdapter">
+
+    <LinearLayout
+        android:id="@+id/ll_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.android.app.buystoreapp.widget.RoundImageView
+                android:id="@+id/id_home_item_image"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/iv_header_def"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_attention_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="姓名"
+                        android:textColor="@color/c_404040"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_profession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="・职业"
+                        android:textColor="@color/c_404040"
+                        android:textSize="18sp"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_user_leve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/vip_diwang"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_companyBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:singleLine="true"
+                    android:text="123456"
+                    android:visibility="gone"
+                    android:textColor="@color/c_404040"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_attentiong"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_attention_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:singleLine="true"
+                        android:text="123456"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/c_404040"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_attention_button"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/corners_f1f1f1_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="取消关注"
+            android:textColor="@color/c_7f7f7f"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

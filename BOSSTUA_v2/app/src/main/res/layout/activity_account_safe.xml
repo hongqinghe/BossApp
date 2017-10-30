@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.app.buystoreapp.managementservice.AccountSafeActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_layout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include"
+        android:orientation="vertical">
+<View
+   style="@style/LineColordddddd"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/AccountSafeText1"
+                android:text="手机号" />
+
+            <Button
+                android:id="@+id/btn_phone_binding_or_change"
+                android:text="修改"
+                style="@style/AccountSafeBtn" />
+
+            <TextView
+                android:id="@+id/tv_set_phone"
+                style="@style/AccountSafeText2"
+                android:textColor="@color/c_999999"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/btn_phone_binding_or_change"
+                android:layout_toRightOf="@+id/textView12"
+                android:layout_toStartOf="@+id/btn_phone_binding_or_change"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView121"
+                style="@style/AccountSafeText1"
+                android:text="ＱＱ" />
+
+            <Button
+                android:id="@+id/btn_qq_binding_or_change"
+                android:text="绑定"
+                style="@style/AccountSafeBtn" />
+
+            <EditText
+                android:id="@+id/et_set_qq"
+                android:hint="请输入要绑定的QQ号"
+                style="@style/AccountSafeText2"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/c_404040"
+                android:inputType="number"
+                android:maxLength="12"
+                android:layout_toLeftOf="@+id/btn_qq_binding_or_change"
+                android:layout_toRightOf="@+id/textView121"
+                android:layout_toStartOf="@+id/btn_qq_binding_or_change"/>
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView122"
+                style="@style/AccountSafeText1"
+                android:text="邮　箱" />
+
+            <Button
+                android:id="@+id/btn_email_binding_or_change"
+                android:text="绑定"
+                style="@style/AccountSafeBtn" />
+
+            <EditText
+                android:id="@+id/et_set_email"
+                style="@style/AccountSafeText2"
+                android:layout_marginLeft="10dp"
+                android:hint="请输入要绑定的邮箱"
+                android:textColor="@color/c_404040"
+                android:inputType="textEmailAddress"
+                android:layout_toLeftOf="@+id/btn_email_binding_or_change"
+                android:layout_toRightOf="@+id/textView122"
+                android:layout_toStartOf="@+id/btn_email_binding_or_change"
+                 />
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView123"
+                style="@style/AccountSafeText1"
+                android:text="@string/change_password" />
+
+            <ImageView
+               style="@style/PersonalsettingsImageViewStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+    </LinearLayout>
+
+</RelativeLayout>

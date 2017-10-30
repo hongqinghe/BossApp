@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bac"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_categry_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_product_list_title_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/id_custom_back_image"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_custom_back" />
+
+                        <!--<Button
+                            android:id="@+id/id_search_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@null"
+                            android:text="搜索"
+                            android:textColor="@color/white" />-->
+
+                        <RelativeLayout
+                            android:id="@+id/id_search_layout"
+                            android:layout_width="300dp"
+                            android:layout_height="30dp"
+                            android:layout_alignBottom="@id/id_custom_back_image"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="45dp"
+                            android:layout_toRightOf="@id/id_custom_back_image"
+                            android:background="@drawable/round_transparent_bg_pressed"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <ImageView
+                                android:id="@+id/id_search_img"
+                                android:layout_width="26dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="6dip"
+                                android:layout_marginRight="3dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_white_search_glass" />
+
+                            <EditText
+                                android:id="@+id/id_search_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left|center_vertical"
+                                android:layout_toRightOf="@id/id_search_img"
+                                android:background="@null"
+                                android:gravity="left|center"
+                                android:hint="@string/top_search_all"
+                                android:imeOptions="actionSearch"
+                                android:singleLine="true"
+                                android:textColorHint="@color/c_ffffff"
+                                android:textSize="@dimen/bottom_top_text_size" />
+
+                            <ImageView
+                                android:id="@+id/id_search_del"
+                                android:layout_width="26dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="6dip"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_city_search_del"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_category_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_transparent_line"
+                            android:padding="5dp"
+                            android:text="分类名称"
+                            android:textColor="@color/c_ffffff"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_white_eye" />
+
+                        <TextView
+                            android:id="@+id/tv_categry_views"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/c_ffffff"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人看过"
+                            android:textColor="@color/c_ffffff"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_categry_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:lines="2"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.android.app.buystore.utils.expandtab.ExpandTabView
+                android:id="@+id/expandtab_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/c_eeeeee" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_eeeeee" />
+
+    <com.view.SwipeRefreshLayoutUpDown
+        android:id="@+id/main_business_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/business_list"
+            style="@style/CustomListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.view.SwipeRefreshLayoutUpDown>
+
+</LinearLayout>

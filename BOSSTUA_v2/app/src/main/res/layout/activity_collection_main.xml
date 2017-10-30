@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".managementservice.CollectionActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/head_layout_blue"/>
+    <LinearLayout
+        android:id="@+id/ll_bd_tt"
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_service_resources"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="服务・资源"
+                android:textColor="@color/bill_text_lv"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_corporate_headlines"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="企业头条"
+                android:textColor="@color/bill_text_hui"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/c_eeeeee"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/line_balance_detail_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:background="@color/bill_text_lv"/>
+
+            <View
+                android:id="@+id/line_balance_detail_income"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bill_text_lv"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_collection_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_bd_tt"
+        />
+</RelativeLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rl_state_setting_top_title"
+        layout="@layout/head_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_state_setting_top_title"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line1"
+            style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_hand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:text="头像" />
+
+            <com.android.app.buystore.utils.CircleImageView
+                android:id="@+id/id_updateuserinfo_userinfo_usericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                style="@style/PersonalsettingsImageViewStyle"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:text="姓名 " />
+
+            <EditText
+                android:id="@+id/et_personal_data_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:hint="请输入姓名"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_gender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rg_gender_checked_boy"
+                    style="@style/GenderStyle"
+                    android:checked="true"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/rg_gender_checked_girl"
+                    style="@style/GenderStyle"
+                    android:text="女" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_city"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:text="城市" />
+
+            <TextView
+                android:id="@+id/tv_personal_data_city"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/textView11"
+                android:layout_toLeftOf="@+id/imageView12"
+                android:layout_toRightOf="@+id/textView11"
+                android:focusableInTouchMode="true"
+                android:gravity="center|right"
+                android:hint="请选择您所在的城市"
+                android:singleLine="true"
+                android:textColor="@color/c_404040"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                style="@style/PersonalsettingsImageViewStyle"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line5"
+            style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_company"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:text="公司/品牌" />
+
+            <EditText
+                android:id="@+id/et_personal_data_company"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:hint="请输入公司称名或品牌名称"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line6"
+            style="@style/LineColordddddd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_personal_data_position"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/c_ffffff"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/PersonalsettingsTextViewStyle"
+                android:layout_marginLeft="15dp"
+                android:text="职位 " />
+
+            <EditText
+                android:id="@+id/et_personal_data_position"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:hint="请输入职位"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineColordddddd" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_personal_data_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c_168eef"
+        android:text="保存"
+        android:textColor="@color/c_ffffff"
+        android:textSize="19sp" />
+</RelativeLayout>

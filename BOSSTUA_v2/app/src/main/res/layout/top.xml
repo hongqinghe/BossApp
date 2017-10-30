@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <include
+        android:id="@+id/id_top_home"
+        layout="@layout/top_home"/>
+
+    <include
+        android:id="@+id/id_top_news"
+        layout="@layout/top_news"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/id_top_setting"
+        layout="@layout/top_setting"
+        android:visibility="gone"/>
+
+</LinearLayout>

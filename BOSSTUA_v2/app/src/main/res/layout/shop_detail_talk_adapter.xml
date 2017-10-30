@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp" >
+
+    <com.android.app.buystore.utils.CircleImageView
+        android:id="@+id/id_shop_detail_talk_icon"
+        android:layout_width="@dimen/shop_detail_talk_icon_width"
+        android:layout_height="@dimen/shop_detail_talk_icon_height"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/id_shop_detail_talk_icon"
+        android:orientation="vertical"
+        android:padding="@dimen/shop_detail_talk_content_padding" >
+
+        <TextView
+            android:id="@+id/id_shop_detail_talk_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/shop_detail_talk_title_size" />
+
+        <TextView
+            android:id="@+id/id_shop_detail_talk_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/shop_detail_talk_content_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_shop_detail_talk_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/shop_detail_talk_title_size" />
+    </LinearLayout>
+
+</RelativeLayout>

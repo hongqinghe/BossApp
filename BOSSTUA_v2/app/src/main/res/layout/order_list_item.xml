@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/ll_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_order_shop"/>
+
+        <TextView
+            android:id="@+id/tv_shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="商家名称"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_order_next"/>
+
+        <TextView
+            android:id="@+id/tv_orderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="center_vertical"
+            android:textColor="#e30006"
+            android:layout_marginRight="30dp"
+            android:text="交易成功"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_order"
+        android:background="#eeeeee"/>
+
+    <com.android.app.buystoreapp.other.CustomListView
+        android:id="@+id/lv_order_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line01"
+        />
+
+    <View
+        android:id="@+id/line02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lv_order_all"
+        android:background="#eeeeee"/>
+
+    <TextView
+        android:id="@+id/tv_order_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line02"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="共2件 商品  合计：50.00元 （含运费￥10元）"
+        android:textColor="#222222"
+        android:textSize="15sp"/>
+
+    <View
+        android:id="@+id/line03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_order_total"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line03"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn1_order"
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#404040"
+            android:background="@drawable/order_btn_bg"
+            android:layout_toLeftOf="@+id/btn2_order"
+            android:text="btn1"/>
+
+        <Button
+            android:id="@+id/btn2_order"
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/order_btn_bg1"
+            android:textColor="#e30006"
+            android:layout_marginRight="20dp"
+            android:text="btn2"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line04"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/rl_order"
+        android:background="#eeeeee"/>
+</RelativeLayout>

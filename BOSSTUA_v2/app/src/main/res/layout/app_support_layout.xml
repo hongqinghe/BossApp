@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingTop="23dp"
+        >
+        <TextView
+            android:id="@+id/tv_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服电话:"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            />
+        <TextView
+            android:id="@+id/id_support_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="010-57193001"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            android:layout_toRightOf="@+id/tv_tv"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/ib_copy_phone_number"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageButton
+            android:id="@+id/ib_copy_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_broadcast_telephone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_below="@+id/ib_copy_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="22dp"
+            android:background="#dddddd"/>
+
+        <TextView
+            android:layout_below="@+id/v_line1"
+            android:layout_marginTop="23dp"
+            android:id="@+id/tv_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服ＱＱ:"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            />
+        <TextView
+            android:layout_below="@+id/v_line1"
+            android:layout_marginTop="23dp"
+            android:id="@+id/id_support_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="254271840"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            android:layout_toLeftOf="@+id/ib_copy_qq"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/tv_tv1"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageButton
+            android:layout_below="@+id/v_line1"
+            android:layout_marginTop="23dp"
+            android:id="@+id/ib_copy_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_copy"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+        <View
+            android:id="@+id/v_line2"
+            android:layout_marginTop="22dp"
+            android:layout_below="@+id/ib_copy_qq"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd"/>
+        <TextView
+            android:layout_below="@+id/v_line2"
+            android:layout_marginTop="23dp"
+            android:id="@+id/tv_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业邮箱:"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            />
+        <TextView
+            android:layout_below="@+id/v_line2"
+            android:layout_marginTop="23dp"
+            android:id="@+id/id_support_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="254371840@qq.com"
+            android:textSize="16sp"
+            android:textColor="#404040"
+            android:layout_toLeftOf="@+id/ib_copy_email"
+            android:layout_toRightOf="@+id/tv_tv2"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageButton
+            android:layout_below="@+id/v_line2"
+            android:layout_marginTop="23dp"
+            android:id="@+id/ib_copy_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_copy"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+        <View
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/ib_copy_email"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dddddd"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/id_support_phone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:layout_marginBottom="12dp"-->
+        <!--android:autoLink="phone"-->
+        <!--android:background="@drawable/app_input_shape"-->
+        <!--android:textSize="18sp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/id_support_weixin"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="12dp"-->
+        <!--android:background="@drawable/app_input_shape"-->
+        <!--android:textSize="18sp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/id_support_qq"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="12dp"-->
+        <!--android:background="@drawable/app_input_shape"-->
+        <!--android:textSize="18sp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/id_support_email"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/app_input_shape"-->
+        <!--android:autoLink="email"-->
+        <!--android:textSize="18sp" />-->
+
+</LinearLayout>

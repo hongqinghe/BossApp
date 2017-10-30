@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="custom_layout_container_default_height">68dp</dimen>
+    <dimen name="custom_layout_container_default_width">80dp</dimen>
+    <dimen name="custom_layout_image_default_height">48dp</dimen>
+    <dimen name="custom_layout_image_default_width">48dp</dimen>
+    <dimen name="custom_layout_text_default_size">16sp</dimen>
+    <dimen name="custom_layout_personal_container_default_height">45dp</dimen>
+    <dimen name="custom_layout_personal_container_default_width">65dp</dimen>
+    <dimen name="custom_layout_personal_image_default_height">25dp</dimen>
+    <dimen name="custom_layout_personal_image_default_width">35dp</dimen>
+    <dimen name="margin_12">12.0dip</dimen>
+    <dimen name="vi_margin">15.0dip</dimen>
+    <dimen name="margin_8">8dip</dimen>
+    <dimen name="expand_tab_item_height">45dp</dimen>
+    <dimen name="bottom_top_text_size">13sp</dimen>
+    <dimen name="activity_bottom_height">60dp</dimen>
+    <dimen name="activity_top_height">48dp</dimen>
+    <dimen name="app_default_padding">8dp</dimen>
+
+    <!-- home dimen -->
+    <dimen name="home_header_btn_t_b">5dp</dimen>
+    <dimen name="home_header_btn_size">23sp</dimen>
+    <dimen name="home_item_image_width">95dp</dimen>
+    <dimen name="home_item_image_height">105dp</dimen>
+    <dimen name="home_item_width">128dp</dimen>
+    <dimen name="home_item_height">130dp</dimen>
+    <dimen name="home_item_padding">3dp</dimen>
+    <dimen name="home_item_title">17sp</dimen>
+    <dimen name="home_item_intro">14sp</dimen>
+    <dimen name="home_item_distance">12sp</dimen>
+    <dimen name="home_item_price">16sp</dimen>
+    <dimen name="home_item_marketprice">12sp</dimen>
+    <!-- goods dimen -->
+    <dimen name="goods_left_item_padding">5dp</dimen>
+    <dimen name="goods_left_item_text_size">15sp</dimen>
+    <dimen name="goodsdetail_top_view_height">35dp</dimen>
+    <dimen name="shop_detail_bottom_btn">14sp</dimen>
+    <dimen name="shop_detail_talk_title_size">12sp</dimen>
+    <dimen name="shop_detail_talk_content_size">18sp</dimen>
+    <dimen name="shop_detail_talk_icon_width">56dp</dimen>
+    <dimen name="shop_detail_talk_icon_height">56dp</dimen>
+    <dimen name="shop_detail_talk_content_padding">5dp</dimen>
+
+    <!-- business dimen -->
+    <dimen name="business_item_padding">3dp</dimen>
+    <dimen name="business_item_image_width">95dp</dimen>
+    <dimen name="business_item_image_height">105dp</dimen>
+    <dimen name="business_store_padding">5dp</dimen>
+    <dimen name="business_item_title">17sp</dimen>
+    <dimen name="business_item_intro">14sp</dimen>
+    <dimen name="business_store_item_title">18sp</dimen>
+    <dimen name="business_store_icon_width">128dp</dimen>
+    <dimen name="business_store_icon_height">120dp</dimen>
+    <dimen name="business_store_item_icon_width">88dp</dimen>
+    <dimen name="business_store_item_icon_height">80dp</dimen>
+    <!-- news dimen -->
+    <dimen name="news_title">16sp</dimen>
+    <dimen name="news_item_image_width">98dp</dimen>
+    <dimen name="news_item_image_height">108dp</dimen>
+    <dimen name="news_item_padding_r_l">3dp</dimen>
+    <dimen name="news_item_padding_t_b">5dp</dimen>
+    <dimen name="news_item_devider_height">1dp</dimen>
+    <!-- setting dimen -->
+    <dimen name="settings_userinfo_textsize">18sp</dimen>
+    <dimen name="settings_message_date">12sp</dimen>
+    <dimen name="settings_message_content">14sp</dimen>
+    <dimen name="order_item_image_width">115dp</dimen>
+    <dimen name="order_item_image_height">105dp</dimen>
+    <!-- shop car item -->
+    <dimen name="shopcar_item_image_height">90dp</dimen>
+    <dimen name="shopcar_item_image_width">95dp</dimen>
+    <dimen name="shopcar_item_name_size">16sp</dimen>
+    <dimen name="shopcar_item_price_size">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 商品详情型号规格字体大小 -->
+    <dimen name="goods_details_xh_size">13sp</dimen>
+</resources>

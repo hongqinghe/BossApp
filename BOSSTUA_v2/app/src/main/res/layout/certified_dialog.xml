@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/management_dialog"
+        android:paddingBottom="17dp">
+
+        <RelativeLayout
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/ic_certified_dailog">
+
+            <ImageButton
+                android:id="@+id/btn_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_certified_back"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_set_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/image"
+            android:layout_alignLeft="@+id/image"
+            android:layout_alignRight="@+id/image"
+            android:layout_alignStart="@+id/image"
+            android:layout_below="@+id/image"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="进行实名认证才可提现哟"
+            android:textColor="@color/c_999999"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_set_warning"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/buy_ticket_type_btn_yellow"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="前去认证"
+            android:textColor="@color/c_ffffff"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_rl"-->
+    <!--android:layout_width="240dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@drawable/management_dialog"-->
+    <!--&gt;-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<Button-->
+    <!--android:id="@+id/btn_true"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@null"-->
+    <!--android:text="确认"-->
+    <!--android:textColor="#007aff"-->
+    <!--android:textSize="18dp"-->
+    <!--android:paddingBottom="13dp"-->
+    <!--android:layout_marginTop="14dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_width="1dp"-->
+    <!--android:background="#d7d7d7"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--<Button-->
+    <!--android:id="@+id/btn_false"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@null"-->
+    <!--android:text="再想想"-->
+    <!--android:textColor="#007aff"-->
+    <!--android:textSize="18dp"-->
+    <!--android:paddingBottom="13dp"-->
+    <!--android:layout_marginTop="14dp"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<View-->
+    <!--android:id="@+id/v_v"-->
+    <!--android:layout_above="@+id/ll_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="#d7d7d7"-->
+    <!--/>-->
+    <!--<LinearLayout-->
+    <!--android:layout_above="@+id/v_v"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<TextView-->
+    <!--android:layout_gravity="center"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="#333333"-->
+    <!--android:textSize="15sp"-->
+    <!--android:paddingTop="16dp"-->
+    <!--android:layout_marginBottom="12dp"-->
+
+    <!--android:text="订单删除后不能恢复，是否删除订单"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+</LinearLayout>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--测试环境-->
+    <!--<string name="web_url">http://192.168.1.122:8080/buyService/service?</string>-->
+    <string name="web_url">http://59.110.5.164/buyService/service?</string>
+    <!--线上环境-->
+    <!--<string name="web_url">http://218.241.30.183:8080/buyService/service?</string>-->
+    <string name="app_name">Boss团</string>
+    <string name="baidulocation_name">baidu map</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">主页</string>
+    <string name="goods">资源</string>
+    <string name="business">服务商</string>
+    <string name="news">通知消息</string>
+    <string name="found">发现</string>
+    <string name="personal_center">个人中心</string>
+    <string name="contentDescription">下划线</string>
+    <string name="location">定位</string>
+    <string name="no_data">没有找到符合条件的数据</string>
+    <string name="default_pic">default_pic</string>
+    <string name="action_bar_edit">编辑</string>
+    <string name="action_bar_star">头条收藏</string>
+    <string name="action_bar_shop_star">商家收藏</string>
+    <string name="action_bar_message_del">删除通知消息</string>
+    <string name="btn_ok">确定</string>
+    <string name="btn_cancle">取消</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_findpwd">找回密码？</string>
+    <string name="btn_register_immediately">立即注册</string>
+    <string name="btn_order">我的订单</string>
+    <string name="btn_shopcar">购物车</string>
+    <string name="btn_commodity_fav">产品收藏</string>
+    <string name="btn_news_fav">头条收藏</string>
+    <string name="btn_shop_fav">商家收藏</string>
+    <string name="personal_no_login_toast">请您先登陆</string>
+    <string name="order_del">删除订单</string>
+    <string name="order_assess">评价</string>
+    <string name="order_charge">立即支付</string>
+    <string name="top_search_commodity">请输入产品名称或关键字</string>
+    <string name="top_search_shop">请输入服务商名称或关键字</string>
+    <string name="top_search_all">搜索你要找的资源、服务、人脉</string>
+    <string name="home_item_price">%1$f元</string>
+    <!--网络异常  -->
+    <string name="service_error_hint">网络请求失败了，请重试...</string>
+    <string name="service_error_but">点击重试</string>
+    <string name="order_is_empty">您还没有相关订单！</string>
+    <!--钱包-->
+    <string-array name="personal_setting">
+        <item>我的钱包</item>
+        <item>BOSS券</item>
+        <item>购物车</item>
+    </string-array>
+    <string-array name="personal_setting_icons">
+        <item>@drawable/ic_personal_pack</item>
+        <item>@drawable/ic_personal_bosstick</item>
+        <item>@drawable/ic_personal_care</item>
+    </string-array>
+    <!--订单-->
+    <string-array name="personal_setting_order">
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+        <item>退款订单</item>
+    </string-array>
+    <string-array name="personal_order_icons">
+        <item>@drawable/ic_setting_pay</item>
+        <item>@drawable/ic_setting_send</item>
+        <item>@drawable/ic_setting_take</item>
+        <item>@drawable/ic_setting_comment</item>
+        <item>@drawable/ic_setting_back</item>
+    </string-array>
+    <!--关注-->
+    <string-array name="personal_setting_follow">
+        <item>已关注</item>
+        <item>已收藏</item>
+        <item>已订阅</item>
+    </string-array>
+    <string-array name="personal_follow_icons">
+        <item>@drawable/ic_follow_fo</item>
+        <item>@drawable/ic_follow_comment</item>
+        <item>@drawable/ic_follow_subscribe</item>
+    </string-array>
+    <!--服务者-->
+    <string-array name="personal_service">
+        <item>管理服务</item>
+        <item>已售订单</item>
+        <item>VIP服务</item>
+        <item>名片设置</item>
+        <item>谁看过我</item>
+    </string-array>
+    <string-array name="personal_service_icons">
+        <item>@drawable/ic_service_manger</item>
+        <item>@drawable/ic_service_sale</item>
+        <item>@drawable/ic_service_vip</item>
+        <item>@drawable/ic_service_speed</item>
+        <item>@drawable/ic_service_scan</item>
+    </string-array>
+    <!--认证管理-->
+    <string-array name="personal_manger">
+        <item>实名认证</item>
+        <item>企业认证</item>
+        <item>职业认证</item>
+        <item>芝麻信用</item>
+        <item>保证金</item>
+    </string-array>
+    <string-array name="personal_manger_icons">
+        <item>@drawable/ic_manger_id_gray</item>
+        <item>@drawable/ic_manger_company_gray</item>
+        <item>@drawable/ic_manger_job_gray</item>
+        <item>@drawable/ic_manger_sesame_gray</item>
+        <item>@drawable/ic_manger_ensure_gray</item>
+    </string-array>
+    <!--其他服务-->
+    <string-array name="personal_other">
+        <item>建议反馈</item>
+        <item>联系客服</item>
+        <item>检查更新</item>
+        <item>邀请好友</item>
+        <item>清除缓存</item>
+        <item>关于我们</item>
+    </string-array>
+    <string-array name="personal_other_icons">
+        <item>@drawable/ic_other_idea</item>
+        <item>@drawable/ic_other_custom</item>
+        <item>@drawable/ic_other_check</item>
+        <item>@drawable/ic_other_invitation</item>
+        <item>@drawable/ic_other_clear</item>
+        <item>@drawable/ic_other_about</item>
+    </string-array>
+    <!--发布标签-->
+    <string-array name="relase_head">
+        <item>约单</item>
+        <item>转让</item>
+    </string-array>
+    <string-array name="relase_head_icon">
+        <item>@drawable/ic_relase_head_1</item>
+        <item>@drawable/ic_relase_head_2</item>
+    </string-array>
+    <string-array name="relase_tag">
+        <item>需求</item>
+        <item>交换</item>
+        <item>招标</item>
+        <item>租赁</item>
+        <item>合作</item>
+        <item>共享</item>
+        <item>免费</item>
+    <!-- <item>经历</item>-->
+ </string-array>
+ <string-array name="relase_tag_icon">
+     <item>@drawable/ic_relase_tag_1</item>
+     <item>@drawable/ic_relase_tag_2</item>
+     <item>@drawable/ic_relase_tag_3</item>
+     <item>@drawable/ic_relase_tag_4</item>
+     <item>@drawable/ic_relase_tag_5</item>
+     <item>@drawable/ic_relase_tag_6</item>
+     <item>@drawable/ic_relase_tag_7</item>
+     <item>@drawable/ic_relase_tag_8</item>
+
+
+ </string-array>
+ <!--发现页面tab-->
+    <string-array name="tab_founds_tag">
+        <item>全部</item>
+        <item>约单</item>
+        <item>转让</item>
+        <item>需求</item>
+        <item>交换</item>
+        <item>招标</item>
+        <item>众帮</item>
+        <item>租赁</item>
+        <item>合作</item>
+        <item>共享</item>
+        <item>免费</item>
+    <!--<item>经历</item>-->
+</string-array>
+<!--账单明细tab-->
+    <string-array name="tab_bill_tag">
+        <item>全部</item>
+        <item>收入</item>
+        <item>支出</item>
+    </string-array>
+    <string-array name="tab_tag">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <!--  <item>L</item>-->
+    </string-array>
+    <!-- 买家订单 -->
+    <string-array name="order_details">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+    </string-array>
+    <!-- 卖家订单 -->
+    <string-array name="seller_order_details">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+        <item>退款</item>
+    </string-array>
+    <!--订单-->
+    <string name="apply_refund_order_reason">请输入退款理由...</string>
+    <string name="apply_refund_order_app_reason">请输入申诉理由...</string>
+    <string name="apply_refund_order_reduse_reason">请输入拒绝退款理由...</string>
+    <string name="business_item_distance">&lt;%1$s</string>
+    <string name="business_item_score">评分  %1$s</string>
+    <string name="business_item_talknum">%1$s评价</string>
+    <string name="business_store_phone">电话：%1$s</string>
+    <string name="business_store_address">地址：%1$s</string>
+    <string name="home_item_score">好评：%1$s分</string>
+    <string name="goods_detail_good_score">好评(%1$s)</string>
+    <string name="goods_detail_medium_score">中评(%1$s)</string>
+    <string name="goods_detail_bad_score">差评(%1$s)</string>
+    <string name="home_item_salenum">已售[%1$s]</string>
+    <string name="home_item_proSurplus">仅剩[%1$s]</string>
+    <string name="goods_group_proSurplus">（库存%1$s件）</string>
+    <string name="goods_details_time_work">工作时间：%1$s至%2$s（早%3$s-晚%4$s）</string>
+    <string name="baidumap_normal">普通</string>
+    <string name="baidumap_following">跟随</string>
+    <string name="baidumap_compass">罗盘</string>
+    <string name="goodsdeatil_addcart">购物车</string>
+    <string name="goodsdeatil_buy">立即购买</string>
+    <string name="goodsdeatil_store">私聊</string>
+    <string name="goodsdeatil_star">名片</string>
+    <string name="goodsdetail_call">留言</string>
+    <string name="click_oncemore_exit">亲，再按一次就要真的要离开我了</string>
+    <string name="goodsdetail_count">月销%1$s笔</string>
+    <string name="goodsdetail_title1">详细</string>
+    <string name="goodsdetail_title2">规格参数</string>
+    <string name="goodsdetail_title3">评价</string>
+    <string name="search_flag_all">搜索产品或服务商</string>
+    <string name="search_flag_commodity">搜索产品</string>
+    <string name="search_flag_shop">搜索服务商</string>
+    <string name="news_content1">推荐</string>
+    <string name="news_content2">人气</string>
+    <string name="news_content3">最新</string>
+    <string name="news_content4">附近</string>
+    <string name="login_user">用户名：</string>
+    <string name="login_authcode">验证码：</string>
+    <string name="hint_authcode">请输入验证码</string>
+    <string name="hint_inviteCode">请输入好友邀请码(可不填)</string>
+    <string name="hint_inviteCode_2">邀请码由6位数字,大写字母组成</string>
+
+    <string name="login_send_authcode">验证码</string>
+    <string name="login_user_hint">请输入您的手机号</string>
+    <string name="login_pwd_hint">请输入您的密码</string>
+    <string name="login_pwd_again_hint">请再次输入您的密码</string>
+    <string name="login_pwd">密码：</string>
+    <string name="modify_pwd">新密码：</string>
+    <string name="login_pwd_again">确认密码：</string>
+    <string name="login_pwd_error">密码不符合要求(6~20位数字或字母)</string>
+    <string name="register_pwd_error">两次密码不一致，请重新输入</string>
+    <string name="personal_usericon">头像</string>
+    <string name="personal_username">用户名</string>
+    <string name="personal_nickname">昵称</string>
+    <string name="personal_score">我的积分</string>
+    <string name="personal_safe">账户安全</string>
+    <string name="personal_safe_hint">可修改密码</string>
+    <string name="personal_address">收货地址管理</string>
+    <string name="personal_exit">注销用户</string>
+    <string name="myorder_detail_wl">查看物流信息</string>
+    <string name="personal_modify">修改个人信息</string>
+    <string name="personal_email_mobile_check">请输入正确的手机号码!</string>
+   <string name="personal_modify_usericon">点击查看个人信息</string>
+   <string name="personal_item_modifypwd">亲!请先登陆</string>
+   <string name="modify_pwd_error">服务器异常，请重新登陆!</string>
+   <string name="try_again">稍后再试</string>
+   <string name="modify_icon_dialog_title">选择照片</string>
+   <string name="modify_progress_title">更新个人信息</string>
+   <string name="modify_progress_message">请稍后 &#8230;</string>
+   <string name="modify_failure">服务器异常，更新失败!</string>
+   <string name="login_progress_title">Boss团登陆中...</string>
+   <string name="register_progress_title">Boss团注册中...</string>
+   <string name="city_progress_title">Boss团获取城市信息中...</string>
+   <string name="news_progress_title">资讯</string>
+   <string name="news_progress_message">加载中...</string>
+   <string name="login_failure">登录失败!请稍后再试</string>
+   <string name="register_failure">注册失败!请稍后再试</string>
+   <string name="failure">服务器异常，请稍后重试</string>
+
+   <array name="modify_icon_dialog_choices">
+       <item>立即拍照</item>
+       <item>从相册选取</item>
+   </array>
+
+   <string name="city_change_title">切换城市</string>
+   <string name="city_change_message">系统检测到您当前城市为%1$s,点击切换</string>
+   <string name="request_authcode_success">验证码发送成功，请注意查收</string>
+   <string name="news_star_save_success">收藏成功</string>
+   <string name="news_star_cancel_success">取消收藏成功</string>
+   <string name="buycar_save_success">成功加入购物车</string>
+   <string name="no_more_data">没有更多信息了</string>
+   <string name="shop_car_buy_all">全选</string>
+   <string name="shop_car_checkout_format">去结算&#040;%1$d&#041;</string>
+   <string name="shop_car_checkout">去结算&#040;0&#041;</string>
+   <string name="shop_car_total_money_format">合计:￥%1$.2f</string>
+   <string name="order_total_money">合计：￥%1$</string>
+   <string name="shop_car_total_money">合计：￥0.00</string>
+   <string name="shop_car_item_money">小计:￥%1$.2f</string>
+   <string name="confirm_order_leave_msg">选填：对本次交易的补充说明</string>
+   <string name="confirm_order_receive_name">收货人:%1$s</string>
+   <string name="confirm_order_receive_phone">联系电话:%1$s</string>
+   <string name="confirm_order_receive_address">收货地址:%1$s</string>
+   <string name="confirm_order_receive_zipCode">邮编:%1$s</string>
+   <string name="confirm_order_goods_count">共%1$s件商品</string>
+   <string name="confirm_order_price">共%1$d件,总金额￥%2$.2f</string>
+   <string name="user_address_name">收货人：</string>
+   <string name="user_address_address">收货地址：</string>
+   <string name="user_address_postcode">邮编：</string>
+   <string name="user_address_phone">联系电话：</string>
+   <string name="user_address_default">一键设为默认地址</string>
+   <string name="user_address_del">删除</string>
+   <string name="user_address_save">保存</string>
+   <string name="order_assess_content_hint">说说你和这件小物的故事吧</string>
+   <string name="about_us_publish_msg">更新内容：%1$s</string>
+   <string name="about_us_publish_date">发布日期：%1$s</string>
+   <string name="about_us_authority_info">版本信息：%1$s</string>
+   <string name="about_us_app_name">BOSS团 For Android</string>
+   <string name="about_us_intro">北京唯快不破科技有限公司旗下</string>
+   <string name="contact_activity_title">联系我</string>
+   <string name="buy_ticket_title">购买boss券</string>
+   <string name="contact_note">温馨提示：请注意复制(长按)，或者对此页面进行截图，关闭此页面，您将再次消耗Boss券才能查看</string>
+   <string name="buy_boss_ticket_note">尊敬的Boss，Boss券可以查看未开通免费查看服务是商的电话，QQ，微信，网址等联系方式</string>
+   <string name="call_notify_text">尊贵的Boss,该服务商未开通免费查看服务，需要消耗您得Boss券，感谢您得支持和理解</string>
+   <!--魏林创建-->
+    <string name="pay_success_hint">温馨提示:在您的服务或者商品交易没有完成之前,请不要确认收货</string>
+    <string name="pay_success">支付成功</string>
+    <string name="look_order">查看订单</string>
+    <string name="back_home">返回首页</string>
+    <string name="recommend">您可能还需要</string>
+    <string name="register_code_wrong">验证码不对哟,请再试一次</string>
+    <string name="register_password_hint">密码由6-20位英文字母、数字符号组成</string>
+    <string name="url">http://www.baidu.com/</string>
+    <string name="register_agreement">《Boss团使用协议》</string>
+    <string name="register_agreement1">注册即表示同意</string>
+    <string name="max_money">每日最多能只提现10000元</string>
+    <string name="min_money">提现金额不得低于100元</string>
+    <string name="vip_text_1">立即开通</string>
+    <string name="vip_text_2">已开通</string>
+    <string name="add_new_address">添加新地址</string>
+    <string name="add_address">添加收货地址</string>
+    <string name="account_safe">账号安全</string>
+    <string name="personal_data">个人资料</string>
+    <string name="address_management">地址管理</string>
+    <string name="personal_set">个人设置</string>
+    <string name="attention">已关注</string>
+    <string name="change_password">更换密码</string>
+    <string name="change_phone">修改手机号</string>
+    <string name="corporate_head_lines">企业头条</string>
+    <string name="management_service">管理服务</string>
+    <string name="more_resourcesand_service">我的更多资源・服务</string>
+    <string name="rapidly_chat_set_up">名片设置</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="with_draw">余额提现</string>
+    <string name="choose_zfb">您还没有绑定支付宝,请先绑定支付宝</string>
+    <string name="choose_yhk">您还没有绑定银行卡,请先绑定银行卡</string>
+    <string name="tx_number">请输入提现金额</string>
+    <string name="tx_number_hint">您已超过每日提现金额</string>
+    <string name="name_empty">请输入真实姓名</string>
+    <string name="zfb_empty">请输入支付宝帐号</string>
+    <string name="bind_one_zfb">为了您的帐号安全，您只能绑定一个支付宝帐号</string>
+    <string name="bind_one_yhk">为了您的帐号安全，您只能绑定一张银行卡</string>
+    <string name="add_yhk">未绑定银行卡</string>
+    <string name="zfb">支付宝账户</string>
+    <string name="state_set">状态设置</string>
+    <string name="see_me">谁看过我</string>
+    <string name="street_list">街道列表</string>
+    <string name="get_boss">获取Boss卷</string>
+    <string name="order_pay">订单支付</string>
+    <string name="choose_image">选择图片</string>
+    <string name="invite_friends">邀请朋友</string>
+    <string name="boss_quan">Boss券</string>
+    <string name="zy_fw">资源・服务分类</string>
+    <string name="speed_chat_title">我的名片</string>
+    <string name="fb_zy_fw">发布资源・服务</string>
+    <string name="zd_mx">账单明细</string>
+    <string name="dy">订阅</string>
+    <string name="qdy">取消订阅</string>
+    <string name="receipt_address">收货地址</string>
+    <string name="foud_password">忘记密码</string>
+    <string name="tv_phone_num_hint">请输入手机号码</string>
+    <string name="phone_same">修改手机号和当前帐号一样,请输入新的手机号</string>
+    <string name="password_wrong">密码错误</string>
+    <string name="username_null">用户名不能为空</string>
+    <string name="uncultivated">程序小哥正在日夜赶工,敬请期待...</string>
+    <string name="title_sesame_credit">芝麻信用</string>
+    <string name="boss_group_registration_protocol">http://59.110.5.164/bossgroupimage/agreement/register/register.html</string><!--Boss团注册协议-->
+    <string name="description_of_the_present">http://59.110.5.164/bossgroupimage/agreement/withdraw/withdraw.html</string><!--提现说明-->
+    <string name="release_notes">http://59.110.5.164/bossgroupimage/agreement/release/release.html</string>  <!-- 发布须知-->
+    <string name="safety_signs">http://59.110.5.164/bossgroupimage/agreement/safetySigns/safetySigns.html</string><!--安全提示-->
+    <string name="software_license_agreement">http://59.110.5.164/bossgroupimage/agreement/software.html</string><!--软件许可使用协议-->
+    <string name="terms_of_use_and_privacy_agreement">http://59.110.5.164/bossgroupimage/agreement/use.html</string><!--使用条款和隐私协议-->
+    <string name="title_bond">保证金</string>
+
+
+    <string name="app_setting_clean_cache_deafult">清除缓存&#040;0&#041;</string>
+    <string name="app_setting_clean_cache">清除缓存&#040;%1$s&#041;</string>
+    <string name="release">选择分类</string>
+
+    <string name="count_money">合计:￥%s</string>
+   <!-- <string name="count_money">合计:￥%1$s元(含运费%2$s元)</string>-->
+    <string name="count_goods">结算(%s)</string>
+    <string name="shop_title">购物车(%s)</string>
+
+    <string name="proSale">已售[%1$s]</string>
+    <string name="proSurplus">仅剩[%1$s]</string>
+    <string name="inviteCount">您已成功邀请%1$s位好友</string>
+    <string name="diallog_ticktet_tip_have">尊贵的Boss，该服务商未开通免费查看，需要消耗Boss券X1，您有%1$s张Boss劵，感谢您的理解与支持。</string>
+    <string name="diallog_ticktet_tip_chat">服务商未设置名片，您可以给对方留言或者私聊，耐心等待回复</string>
+    <string name="diallog_ticktet_tip_direct">该服务商很贴心，您可以免Boss劵查看名片，极速对接资源服务</string>
+    <string name="diallog_ticktet_tip_not">尊贵的Boss，该服务商未开通免费查看，需要消耗Boss券X1，您有0张Boss劵，感谢您的理解与支持。</string>
+    <string name="diallog_ticktet_but_get">获取BOSS劵</string>
+    <string name="network_is_bad">网络不给力！</string>
+    <string name="get_send_name">请填写正确的运单号和快递公司</string>
+
+    <!--版本更新-->
+    <string name="exit_cancel">取消</string>
+    <string name="bt_update">更新</string>
+    <string name="bt_install">安装</string>
+    <string name="update_version">正在检测版本</string>
+    <string name="exit">退出</string>
+    <string name="text_confirm_exit">您确定要退出吗？</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

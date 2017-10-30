@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B30d0d0d"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_speed_chat_bg"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/TitleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:text="@string/call_notify_text"
+        android:textColor="#7d7d7d"
+        android:textSize="12sp"
+        android:layout_above="@+id/tv_buy_stick"
+        android:layout_alignLeft="@+id/imageView10"
+        android:layout_alignStart="@+id/imageView10"
+        android:layout_alignRight="@+id/imageView10"
+        android:layout_alignEnd="@+id/imageView10"/>
+
+    <ImageView
+        android:id="@+id/iv_dialog_closs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/ic_closs_white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"/>
+
+    <TextView
+        android:id="@+id/tv_buy_stick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_red_white_storck"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:text="@string/diallog_ticktet_but_get"
+        android:layout_alignBottom="@+id/imageView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="· 名片快速联系服务商· "
+         android:textColor="@color/c_7d7d7d"
+         android:textSize="12sp"
+         android:id="@+id/textView5"
+         android:layout_above="@+id/tv_buy_stick"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="51dp" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_7d7d7d"
+        android:textSize="12sp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="@string/diallog_ticktet_tip_not"
+        android:id="@+id/tv_boss_ticket"
+        android:layout_above="@+id/tv_buy_stick"
+        android:layout_alignLeft="@+id/imageView10"
+        android:layout_alignStart="@+id/imageView10"
+        android:layout_alignRight="@+id/imageView10"
+        android:layout_alignEnd="@+id/imageView10"/>
+    <!-- <TextView
+         android:id="@+id/boosCoin"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:textSize="16sp"
+         android:textColor="#000000"
+         android:gravity="center"
+         android:layout_marginTop="20dp"
+         android:text="查看该信息将消耗您N张Boss券"/>
+
+     <TextView
+         android:id="@+id/myBossCoin"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:textSize="16sp"
+         android:textColor="#000000"
+         android:gravity="center"
+         android:layout_marginTop="20dp"
+         android:text="您有N张Boss券"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginTop="30dp"
+         android:layout_marginBottom="20dp">
+         <Button
+             android:id="@+id/OKBtn"
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="10dp"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="确定使用"/>
+         <Button
+             android:id="@+id/Buy"
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="20dp"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="获取boss券"/>
+     </LinearLayout>-->
+
+</RelativeLayout>

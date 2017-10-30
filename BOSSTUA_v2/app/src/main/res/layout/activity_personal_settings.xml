@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/rl_state_setting_top_title"
+        layout="@layout/head_layout"/>
+
+    <LinearLayout
+        android:layout_below="@+id/rl_state_setting_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            style="@style/LineColordddddd"
+            />
+
+    <RelativeLayout
+        android:id="@+id/rl_personal_data"
+        style="@style/PersonalsettingsRelativeLayoutStyle">
+        <TextView
+            style="@style/PersonalsettingsTextViewStyle"
+            android:text="@string/personal_data"
+
+            />
+        <ImageView
+            style="@style/PersonalsettingsImageViewStyle"
+            />
+
+    </RelativeLayout>
+    <View
+        style="@style/LineColordddddd"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_account_security"
+        style="@style/PersonalsettingsRelativeLayoutStyle">
+        <TextView
+            style="@style/PersonalsettingsTextViewStyle"
+            android:text="@string/account_safe"
+
+            />
+        <ImageView
+            style="@style/PersonalsettingsImageViewStyle"
+            />
+
+    </RelativeLayout>
+    <View
+        style="@style/LineColordddddd"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_address_management"
+        style="@style/PersonalsettingsRelativeLayoutStyle">
+        <TextView
+            style="@style/PersonalsettingsTextViewStyle"
+            android:text="@string/address_management"
+
+            />
+        <ImageView
+            style="@style/PersonalsettingsImageViewStyle"
+            />
+
+    </RelativeLayout>
+    <View
+        style="@style/LineColordddddd"
+        />
+    </LinearLayout>
+    <Button
+        android:id="@+id/ib_personal_setting_exit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c_168eef"
+        android:text="退出当前帐户"
+        android:textColor="@color/c_ffffff"
+        android:textSize="19sp"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

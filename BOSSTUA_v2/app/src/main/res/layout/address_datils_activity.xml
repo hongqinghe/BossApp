@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/id_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/search_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/id_search_img"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="6dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/actionbar_search_icon" />
+
+            <EditText
+                android:id="@+id/et_search_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical"
+                android:layout_toRightOf="@id/id_search_img"
+                android:background="@null"
+                android:gravity="left|center"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/bottom_top_text_size" />
+
+            <ImageView
+                android:id="@+id/id_search_del"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="6dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_city_search_del"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_details_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>

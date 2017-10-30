@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rl_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                tools:context="com.android.app.buystoreapp.managementservice.EvaluateActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/order_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_boss_default"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/rated_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:hint="请输入评价内容"
+                android:minLines="3"
+                android:maxLength="100"
+                android:textColor="#999999"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rated_context"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="25dp"
+                android:text="0/100"
+                android:textColor="#999999"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_ll1"
+        android:background="#eeeeee"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/view_view1"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="综合评价"/>
+
+        <RadioGroup
+            android:id="@+id/rg_chacked"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="15dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_praise"
+                style="@style/MyRadioButton"
+                android:checked="true"
+                android:text="好评"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_comment"
+                style="@style/MyRadioButton"
+                android:text="中评"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_bad"
+                style="@style/MyRadioButton"
+                android:text="差评"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_ll2"
+        android:background="#eeeeee"/>
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_view2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="晒图(最多三张)"
+        android:textColor="#a5a5a5"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_ll3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_three"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/rated_img"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_view3"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/ll_ll3"
+        android:background="#eeeeee"/>
+</RelativeLayout>
